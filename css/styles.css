@@ -32,7 +32,7 @@ button {
   cursor: pointer;
 }
 
-/* Burger Menu */
+/* BURGER MENU */
 #burger-toggle {
   position: fixed; /* Used to keep the toggle always in the same part of the screen, even if user scrolls down */
   right: 16px;
@@ -90,7 +90,7 @@ nav  {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  background-color: #ff0000;
+  background-color: #000;
   display: none; /* Navigation is not displayed by default */
 }
 
@@ -99,10 +99,17 @@ nav  {
 }
 
 nav ul {
+  list-style-type: none;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+nav ul li {
+  margin-bottom: 3em;
 }
 
 /* HEADER */
@@ -183,3 +190,36 @@ footer h3 {
 }
 
 /* MEDIA QUERIES */
+@media screen and (min-width: 660px) {
+  #burger-toggle {
+    display: none;
+  }
+
+  nav  {
+    position: absolute;
+    background-color: transparent;
+  }
+
+  #nav-container {
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    background-color: transparent;
+    display: block;
+  }
+
+  nav ul {
+    display: flex;
+    color: #000;
+  }
+
+  nav ul li {
+    margin-right: 5em;
+    margin-bottom: 0;
+  }
+
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+}
