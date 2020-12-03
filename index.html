@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blackrock Cafe</title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -16,65 +16,89 @@
 
       <div id="nav-container">
         <ul id="navigation">
-          <li>Home</li>
-          <li>Restaurant</li>
-          <li>Menu</li>
-          <li>Gallery</li>
-          <li>Contacts</li>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Restaurant</a>
+          </li>
+          <li>
+            <a href="#">Menu</a>
+          </li>
+          <li>
+            <a href="#">Gallery</a>
+          </li>
+          <li>
+            <a href="#">Contacts</a>
+          </li>
         </ul> 
       </div>
     </nav>
 
     <!-- Header -->
-    <div class="container">
       <header>
-        <h1>Blackrock Cafe</h1>
-        <h3>Delicious food since 2022</h3>
-        <button>Call To Action</button>
+        <div class="overlay">
+          <div class="container">
+            <h1>Blackrock Cafe</h1>
+            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit dolores 
+              cupiditate, architecto magnam repudiandae aspernatur modi fugiat.
+              Numquam, earum sint.</h3>
+            <button>Call To Action</button>
+          </div>
+        </div>
       </header>
 
       <!-- Main -->
       <main>
-        <h2>The Restaurant</h2>
-        <div id="images">
-          <div></div>
+        <div class="container">
+          <h2>The Restaurant</h2>
+
+          <div class="flex-container">
+            <div id="image">
+              <img src="./images/photo-1590846406792-0adc7f938f1d.jpg" alt="The Restaurant">
+            </div>
+
+            <div>
+              <h3>Welcome to the best cafe in Blackrock</h3>
+
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, officia! Repellat adipisci, fuga fugit laborum
+                  placeat, explicabo nam aperiam veniam incidunt nesciunt consectetur rerum vero suscipit laboriosam excepturi 
+                  vitae natus in pariatur consequuntur, ipsum libero? Quisquam iure sequi amet omnis!</p>
+              <a href="#">
+                <button>Menu</button>
+              </a>
+            </div>
+          </div>
         </div>
-
-        <h3>Welcome to the best cafe in Blackrock</h3>
-
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, officia! Repellat adipisci, fuga fugit laborum
-            placeat, explicabo nam aperiam veniam incidunt nesciunt consectetur rerum vero suscipit laboriosam excepturi 
-            vitae natus in pariatur consequuntur, ipsum libero? Quisquam iure sequi amet omnis!</p>
-
-        <a href="#" class="btn">
-          <button>Menu</button>
-        </a>
       </main>
-    </div>
 
     <footer>
       <div class="container">
         <div>
-          <h3>About Us</h3>
+          <h4>About Us</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt necessitatibus ipsam ex quibusdam cumque veniam, exercitationem ea architecto mollitia! Iure cumque non aliquam sit quasi officiis perspiciatis? Cupiditate, consequuntur accusantium!</p>
         </div>
 
         <div>
-          <h3>Opening Hours</h3>
-          <p>Monday - Saturday</p>
-          <p>5PM - 11PM</p>
+          <h4>Opening Hours</h4>
+          <p>Monday: 5PM - 10PM</p>
+          <p>Tuesday: 5PM - 10PM</p>
+          <p>Wednsday: 5PM - 10PM</p>
+          <p>Thursday: 5PM - 10PM</p>
+          <p>Friday: 5PM - 10PM</p>
+          <p>Saturday: 5PM - 12PM</p>
         </div>
 
         <div>
-          <h3>Contact Info</h3>
-          <p>Address:</p>
-          <p>SomeRandomAddress, City, Country</p>
-          <p>Email:</p>
-          <p>Thisisanemail@gmail.com</p>
+          <h4>Contact Info</h4>
+          <p class="white">Address:</p>
+          <p class="margin-btm">SomeRandomAddress, City, Country</p>
+          <p class="white">Email:</p>
+          <p class="margin-btm">Thisisanemail@gmail.com</p>
         </div>
       </div>
     </footer>
 
-  <script src="/javascript/script.js"></script>
+  <script src="./javascript/script.js"></script>
 </body>
 </html>

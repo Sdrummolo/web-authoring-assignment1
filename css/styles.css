@@ -19,17 +19,39 @@ body.hideOverflow {
 }
 
 /* CLASSES */
-.container {
+div.container {
   max-width: 1200px;
   margin: auto; 
   padding: 1em;
 }
 
+div.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* GENERAL */
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
 button {
+  border: 2px solid;
   display: block;
-  padding: 1em;
+  padding: 1em 2em;
+  text-transform: uppercase;
   cursor: pointer;
+  letter-spacing: 2px;
+  transition: 0.2s ease;
+  font-weight: 700;
 }
 
 /* BURGER MENU */
@@ -84,6 +106,7 @@ nav  {
   background-color: #000;
   width: 100%;
   height: 58px;
+  z-index: 1;
 }
 
 #nav-container {
@@ -99,12 +122,10 @@ nav  {
 }
 
 nav ul {
-  list-style-type: none;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
   text-align: center;
 }
 
@@ -112,8 +133,23 @@ nav ul li {
   margin-bottom: 3em;
 }
 
+nav ul li a {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+
+}
+
 /* HEADER */
 header {
+  min-height: 100vh;
+  height: 100vh;
+  background: url(../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg) center center/cover no-repeat;
+  position: relative;
+  color: #fff;
+}
+
+header div.container {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -122,17 +158,29 @@ header {
 }
 
 header h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 header h3 {
-  margin-bottom: 2em;
+  max-width: 700px;
+  margin: 0 auto 2em auto;
   text-align: center;
+  font-weight: 300;
 }
 
 header button {
   margin: 0 auto 0 auto;
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+header button:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 /* MAIN */
@@ -140,14 +188,22 @@ main {
   margin-bottom: 3em;
 }
 
+main.container {
+  display: flex;
+  flex-direction: column;
+}
+
 main h2 {
-  margin-bottom: 1em;
+  margin: 3em 0 2em 0;
   text-align: center;
 }
 
-#images {
-  width: 100%;
+#image {
   margin-bottom: 2em;
+}
+
+#image img {
+  width: 100%;
 }
 
 #images div { /* TEMPORARY */
@@ -169,11 +225,19 @@ main p {
 
 main button {
   margin: auto;
+  border-color: rgb(212, 38, 38);
+  background-color: rgb(212, 38, 38);
+  color: #fff;
+}
+
+main button:hover {
+  color: rgb(212, 38, 38);
+  background-color: #fff;
 }
 
 footer {
   color: #fff;
-  background-color: rgb(150, 150, 150);
+  background-color: rgb(63, 63, 63);
 }
 
 footer {
@@ -185,8 +249,20 @@ footer div {
   margin-bottom: 3em;
 }
 
-footer h3 {
+footer h4 {
   margin-bottom: 1em;
+}
+
+footer p {
+  color: rgb(201, 201, 201);
+}
+
+footer p.white {
+  color: #fff;
+}
+
+footer p.margin-btm {
+  margin-bottom: .7em;
 }
 
 /* MEDIA QUERIES */
@@ -195,6 +271,7 @@ footer h3 {
     display: none;
   }
 
+  /* NAVBAR */
   nav  {
     position: absolute;
     background-color: transparent;
@@ -207,6 +284,7 @@ footer h3 {
     width: 100%;
     background-color: transparent;
     display: block;
+    position: relative;
   }
 
   nav ul {
@@ -221,5 +299,49 @@ footer h3 {
 
   nav ul li:last-child {
     margin-right: 0;
+  }
+
+  nav ul li a {
+    font-size: 12px;
+    padding-bottom: 2px;
+    transition: 0.2s ease;
+  }
+
+  nav ul li a::after {
+    position: absolute;
+    content: '';
+    border-bottom: solid 3px #019fb6;
+    transition: left 250ms ease-in-out, right 250ms ease-in-out;
+    opacity: 0;
+  }
+
+  nav ul li a::after:hover {
+    opacity: 1;
+  }
+  /* MAIN */
+  main div.flex-container {
+    display: flex;
+    margin-top: 3em;
+    align-items: center;
+    justify-items: space-between;
+    text-align: center;
+  }
+
+  main div.flex-container div {
+    width: 50%;
+    padding: 1em;
+  }
+
+  main h2 {
+    font-size: 1.8em;
+    margin: 3em 0 0 0;
+    margin-top: 3em;
+  }
+
+
+  footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3em;
   }
 }
