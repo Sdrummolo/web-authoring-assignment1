@@ -7,73 +7,74 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-      <!-- Burger Menu -->
-      <div id="burger-toggle">
-        <div></div>
-      </div>
+  <!-- Navigation -->
+  <nav>
+    <!-- Burger Menu -->
+    <div id="burger-toggle">
+      <div></div>
+    </div>
 
-      <div id="nav-container">
-        <ul id="navigation">
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Restaurant</a>
-          </li>
-          <li>
-            <a href="#">Menu</a>
-          </li>
-          <li>
-            <a href="#">Gallery</a>
-          </li>
-          <li>
-            <a href="#">Contacts</a>
-          </li>
-        </ul> 
-      </div>
-    </nav>
+    <div id="nav-container">
+      <ul id="navigation">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#restaurant">Restaurant</a>
+        </li>
+        <li>
+          <a href="#">Menu</a>
+        </li>
+        <li>
+          <a href="#">Gallery</a>
+        </li>
+        <li>
+          <a href="#contacts">Contacts</a>
+        </li>
+      </ul> 
+    </div>
+  </nav>
 
-    <!-- Header -->
-      <header>
-        <div class="overlay">
-          <div class="container">
-            <h1>Blackrock Cafe</h1>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit dolores 
-              cupiditate, architecto magnam repudiandae aspernatur modi fugiat.
-              Numquam, earum sint.</h3>
-            <button>Call To Action</button>
-          </div>
-        </div>
-      </header>
-
-      <!-- Main -->
-      <main>
-        <div class="container">
-          <h2>The Restaurant</h2>
-
-          <div class="flex-container">
-            <div id="image">
-              <img src="./images/photo-1590846406792-0adc7f938f1d.jpg" alt="The Restaurant">
-            </div>
-
-            <div>
-              <h3>Welcome to the best cafe in Blackrock</h3>
-
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, officia! Repellat adipisci, fuga fugit laborum
-                  placeat, explicabo nam aperiam veniam incidunt nesciunt consectetur rerum vero suscipit laboriosam excepturi 
-                  vitae natus in pariatur consequuntur, ipsum libero? Quisquam iure sequi amet omnis!</p>
-              <a href="#">
-                <button>Menu</button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </main>
-
-    <footer>
+<!-- Header -->
+  <header>
+    <div class="overlay">
       <div class="container">
+        <h1>Blackrock Cafe</h1>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit dolores 
+          cupiditate, architecto magnam repudiandae aspernatur modi fugiat.
+          Numquam, earum sint.</h3>
+        <button>Call To Action</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div class="container" id="restaurant">
+      <h2>The Restaurant</h2>
+
+      <div class="flex-container">
+        <div id="image">
+          <img src="./images/photo-1590846406792-0adc7f938f1d.jpg" alt="The Restaurant">
+        </div>
+
+        <div>
+          <h3>Welcome to the best cafe in Blackrock</h3>
+
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, officia! Repellat adipisci, fuga fugit laborum
+              placeat, explicabo nam aperiam veniam incidunt nesciunt consectetur rerum vero suscipit laboriosam excepturi 
+              vitae natus in pariatur consequuntur, ipsum libero? Quisquam iure sequi amet omnis!</p>
+          <a href="#">
+            <button>Menu</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container" id="contacts">
+      <div class="grid-container">
         <div>
           <h4>About Us</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt necessitatibus ipsam ex quibusdam cumque veniam, exercitationem ea architecto mollitia! Iure cumque non aliquam sit quasi officiis perspiciatis? Cupiditate, consequuntur accusantium!</p>
@@ -97,7 +98,32 @@
           <p class="margin-btm">Thisisanemail@gmail.com</p>
         </div>
       </div>
-    </footer>
+
+      <div id="socials">
+        <ul>
+          <li>
+            <a href="#">
+              <img src="./images/facebook-icon.svg" alt="Facebook">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/instagram-icon.svg" alt="Instagram">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/twitter-icon.svg" alt="Twitter">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="copyright">
+        <small>&#169 Luigi Di Paolo, 2020</small>
+      </div>
+    </div>
+  </footer>
 
   <script src="./javascript/script.js"></script>
 </body>

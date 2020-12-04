@@ -45,7 +45,6 @@ ul {
 
 button {
   border: 2px solid;
-  display: block;
   padding: 1em 2em;
   text-transform: uppercase;
   cursor: pointer;
@@ -144,7 +143,7 @@ nav ul li a {
 header {
   min-height: 100vh;
   height: 100vh;
-  background: url(../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg) center center/cover no-repeat;
+  background: url(/images/header-bg.jpg) center center/cover no-repeat;
   position: relative;
   color: #fff;
 }
@@ -185,17 +184,22 @@ header button:hover {
 
 /* MAIN */
 main {
-  margin-bottom: 3em;
+  margin: 4em 0;
+  text-align: center;
 }
 
-main.container {
+main div.flex-container {
   display: flex;
   flex-direction: column;
+  margin-top: 3em;
+  align-items: center;
+  text-align: center;
 }
 
 main h2 {
-  margin: 3em 0 2em 0;
-  text-align: center;
+  margin-bottom: 2em;
+  border-bottom: 3px solid #d42626;
+  display: inline;
 }
 
 #image {
@@ -204,12 +208,6 @@ main h2 {
 
 #image img {
   width: 100%;
-}
-
-#images div { /* TEMPORARY */
-  width: 100%;
-  height: 250px;
-  background-color: gray;
 }
 
 main h3 {
@@ -224,7 +222,7 @@ main p {
 }
 
 main button {
-  margin: auto;
+  justify-self: center;
   border-color: rgb(212, 38, 38);
   background-color: rgb(212, 38, 38);
   color: #fff;
@@ -238,11 +236,7 @@ main button:hover {
 footer {
   color: #fff;
   background-color: rgb(63, 63, 63);
-}
-
-footer {
   padding-top: 2em;
-  padding-bottom: 3em;
 }
 
 footer div {
@@ -265,6 +259,32 @@ footer p.margin-btm {
   margin-bottom: .7em;
 }
 
+div #socials {
+}
+
+div #socials ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div #socials ul li {
+  margin-right: 30px;
+}
+
+div #socials ul li:last-child {
+  margin-right: 0;
+}
+
+div #socials ul img {
+  width: 30px;
+}
+
+div #copyright {
+  margin-bottom: 0;
+  text-align: center;
+}
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 660px) {
   #burger-toggle {
@@ -284,7 +304,6 @@ footer p.margin-btm {
     width: 100%;
     background-color: transparent;
     display: block;
-    position: relative;
   }
 
   nav ul {
@@ -304,42 +323,33 @@ footer p.margin-btm {
   nav ul li a {
     font-size: 12px;
     padding-bottom: 2px;
-    transition: 0.2s ease;
+    border-bottom: 3px solid transparent;
+    transition: .2s ease;
   }
 
-  nav ul li a::after {
-    position: absolute;
-    content: '';
-    border-bottom: solid 3px #019fb6;
-    transition: left 250ms ease-in-out, right 250ms ease-in-out;
-    opacity: 0;
+  nav ul li a:hover {
+    border-bottom: 3px solid #d42626;
   }
 
-  nav ul li a::after:hover {
-    opacity: 1;
-  }
   /* MAIN */
   main div.flex-container {
-    display: flex;
-    margin-top: 3em;
-    align-items: center;
-    justify-items: space-between;
-    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
-  main div.flex-container div {
+  main div.flex-container div{
     width: 50%;
-    padding: 1em;
   }
 
   main h2 {
     font-size: 1.8em;
-    margin: 3em 0 0 0;
-    margin-top: 3em;
   }
 
+  div #image {
+    margin-right: 2em;
+  }
 
-  footer .container {
+  div .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 3em;
