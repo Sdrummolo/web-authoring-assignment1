@@ -1,3 +1,4 @@
+// Set all my selectors to variables
 const body = document.body;
 const burgerToggle = document.querySelector("#burger-toggle");
 const navigation = document.querySelector("#nav-container");

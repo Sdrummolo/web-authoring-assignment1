@@ -1,6 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+/* 
+Note: In this assignment i will be using "display: flex" very often, because it allows me to use
+some very handy properties like justify-content and align-items. I am specifying it here at the
+top at the document, in order to avoid writing too many comments in the CSS.
+*/
 
-/* Resets padding, margin and set the box sizing to border box */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+/* Imports "Open Sans" from google's font library */
+
+:root {
+  --bright-red: #d42626; /* I am setting this color to a variable since it's used very often in the page */
+}
+
 *, *::before, *::after {
   padding: 0;
   margin: 0;
@@ -18,44 +28,37 @@ body.hideOverflow {
   overflow: hidden; /* Disable scrollbar when burger menu is open */
 }
 
-/* CLASSES */
+/* GENERAL */
 div.container {
   max-width: 1200px;
   margin: auto; 
   padding: 1em;
 }
 
-div.overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+a {
+  text-decoration: none; /* Remove underline from links */
 }
 
-/* GENERAL */
-a {
-  text-decoration: none;
-}
 
 ul {
   list-style-type: none;
 }
 
-button {
+div .btn {
   border: 2px solid;
   padding: 1em 2em;
   text-transform: uppercase;
-  cursor: pointer;
-  letter-spacing: 2px;
-  transition: 0.2s ease;
+  cursor: pointer; /* Changes cursor to a pointer when user hovers on button */
+  letter-spacing: 2px; /* Defines space between letters */
+  transition: 0.2s ease; /* Used for animations, the first value is the length and the second the type of the animation */
   font-weight: 700;
+  font-size: 14px;
+  display: inline;
 }
 
 /* BURGER MENU */
 #burger-toggle {
-  position: fixed; /* Used to keep the toggle always in the same part of the screen, even if user scrolls down */
+  position: fixed; /* Removes burger toggle from normal flow and keeps it always in the same position*/
   right: 16px;
   top: 16px;
   width: 30px;
@@ -63,21 +66,21 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2; /* Makes the toggle always visible */
+  z-index: 2; /* Makes the toggle always in front */
   cursor: pointer;
 }
 
-#burger-toggle div {
-  position: relative;
+#burger-toggle div { /* Second line of the burger menu */
+  position: relative; /* Needed in order to use position absolute in inner divs */
   width: 100%;
   height: 2px;
   background-color: #fff;
   transition: all 0.4s ease;
 }
 
-#burger-toggle div::before,
+#burger-toggle div::before, /* First line of the burger menu */
 #burger-toggle div::after {
-  content: '';
+  content: ''; /* Used with the ::before and ::after pseudo elements to insert content */
   position: absolute;
   top: -10px;
   width: 30px;
@@ -85,18 +88,18 @@ button {
   background-color: #fff;
 }
 
-#burger-toggle div::after {
+#burger-toggle div::after { /* Third line of burger menu */
   top: 10px;
 }
 
 #burger-toggle.open div{
-  transform: rotate(135deg);
+  transform: rotate(135deg); /* Rotates the toggle of 135 degrees when the "open" class is applied */
 }
 
 #burger-toggle.open div::before,
 #burger-toggle.open div::after {
-  top: 0;
-  transform: rotate(90deg);
+  top: 0; /* Aligns the first and third line on top of each other */
+  transform: rotate(90deg); /* Rotates the first and third line of 90 degrees when the "open" class is applied */
 }
 
 /* NAVBAR */
@@ -110,7 +113,7 @@ nav  {
 
 #nav-container {
   position: absolute;
-  height: 100vh;
+  height: 100vh; /* View Port units calculate the size of the screen the user is using, 100 means 100% of the screen */
   width: 100vw;
   background-color: #000;
   display: none; /* Navigation is not displayed by default */
@@ -124,7 +127,7 @@ nav ul {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* Shifts the ul 50% of it's width and height back to the left and top, used in conjunction with top 50% and left 50% to center the ul */
   text-align: center;
 }
 
@@ -136,28 +139,37 @@ nav ul li a {
   color: #fff;
   font-size: 16px;
   text-transform: uppercase;
-
 }
 
 /* HEADER */
 header {
-  min-height: 100vh;
+  min-height: 100vh; 
   height: 100vh;
   background: url(/images/header-bg.jpg) center center/cover no-repeat;
   position: relative;
   color: #fff;
 }
 
+div.overlay { /* An overlay that will cover the whole header, giving it a darker shade */
+  background-color: rgba(0, 0, 0, 0.5); /* rgba allows to specify the opacity of the color. From 0 (transparent) to 1 (solid) */
+  position: absolute; /* Takes the element out of normal flow. Used in conjunction with the top, left, right and bottom property for more precise positioning*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 header div.container {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: column; /* Changes the flow of the flex container to column */
   min-height: 100vh;
   height: 100vh;
 }
 
 header h1 {
-  font-size: 2.5em;
+  font-size: 2.2em;
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
@@ -170,14 +182,13 @@ header h3 {
   font-weight: 300;
 }
 
-header button {
-  margin: 0 auto 0 auto;
+header .btn {
   background-color: transparent;
   border-color: #fff;
   color: #fff;
 }
 
-header button:hover {
+header .btn:hover { /* The hover selector specifies css properties when the element is hovered */
   background-color: #fff;
   color: #000;
 }
@@ -193,13 +204,13 @@ main div.flex-container {
   flex-direction: column;
   margin-top: 3em;
   align-items: center;
-  text-align: center;
+  justify-content: center;
 }
 
 main h2 {
   margin-bottom: 2em;
-  border-bottom: 3px solid #d42626;
-  display: inline;
+  border-bottom: 3px solid var(--bright-red);
+  display: inline; /* Makes the header an inline element */
 }
 
 #image {
@@ -218,18 +229,17 @@ main h3 {
 main p {
   max-width: 80%;
   margin: auto;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
-main button {
-  justify-self: center;
-  border-color: rgb(212, 38, 38);
-  background-color: rgb(212, 38, 38);
+main .btn {
+  border-color: var(--bright-red); 
+  background-color: var(--bright-red);
   color: #fff;
 }
 
-main button:hover {
-  color: rgb(212, 38, 38);
+main .btn:hover {
+  color: var(--bright-red);
   background-color: #fff;
 }
 
@@ -257,9 +267,6 @@ footer p.white {
 
 footer p.margin-btm {
   margin-bottom: .7em;
-}
-
-div #socials {
 }
 
 div #socials ul {
@@ -328,12 +335,17 @@ div #copyright {
   }
 
   nav ul li a:hover {
-    border-bottom: 3px solid #d42626;
+    border-bottom: 3px solid var(--bright-red); 
+  }
+
+  /* HEADER */
+  header h1 {
+    font-size: 2.5em;
   }
 
   /* MAIN */
   main div.flex-container {
-    flex-direction: row;
+    flex-direction: row; /* Changes the flow of the flex container to row */
     justify-content: space-between;
   }
 
@@ -349,9 +361,9 @@ div #copyright {
     margin-right: 2em;
   }
 
-  div .grid-container {
+  div .grid-container { /* Grid is a 2 dimentional layout module, similar to flexbox */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 3em;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 responsive columns with the same width */
+    gap: 3em; /* Specifies the space between the columns */
   }
 }
