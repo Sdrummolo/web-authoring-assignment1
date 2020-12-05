@@ -1,7 +1,5 @@
 /* 
-Note: In this assignment i will be using "display: flex" very often, because it allows me to use
-some very handy properties like justify-content and align-items. I am specifying it here at the
-top at the document, in order to avoid writing too many comments in the CSS.
+Note: In this assignment i will often use flexbox (a one dimensional layout system) in conjunction with justify-content and align-items to control the flow of the document.
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
@@ -102,7 +100,7 @@ div .btn {
   transform: rotate(90deg); /* Rotates the first and third line of 90 degrees when the "open" class is applied */
 }
 
-/* NAVBAR */
+/* NAVIGATION */
 nav  {
   position: fixed;
   background-color: #000;
@@ -145,7 +143,7 @@ nav ul li a {
 header {
   min-height: 100vh; 
   height: 100vh;
-  background: url(/images/header-bg.jpg) center center/cover no-repeat;
+  background: url(../images/header-bg.jpg) center center/cover no-repeat;
   position: relative;
   color: #fff;
 }
@@ -285,6 +283,11 @@ div #socials ul li:last-child {
 
 div #socials ul img {
   width: 30px;
+  transition: .2s ease;
+}
+
+div #socials ul img:hover {
+  transform: scale(1.2); /* Scales the element by a factor of 1.2 */
 }
 
 div #copyright {
@@ -298,7 +301,7 @@ div #copyright {
     display: none;
   }
 
-  /* NAVBAR */
+  /* NAVIGATION */
   nav  {
     position: absolute;
     background-color: transparent;
