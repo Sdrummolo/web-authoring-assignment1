@@ -18,7 +18,7 @@ Note: In this assignment i will often use flexbox (a one dimensional layout syst
 body {
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
+  line-height: 1.6; /* Specifies the height of the lines */
   position: relative; /* Needed in order to use position fixed in navbar and burger-toggle */
 }
 
