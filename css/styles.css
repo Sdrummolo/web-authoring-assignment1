@@ -72,7 +72,7 @@ div .btn {
   position: relative; /* Needed in order to use position absolute in inner divs */
   width: 100%;
   height: 2px;
-  background-color: #fff;
+  background-color: #fff; /* White */
   transition: all 0.4s ease;
 }
 
@@ -83,7 +83,7 @@ div .btn {
   top: -10px;
   width: 30px;
   height: 2px;
-  background-color: #fff;
+  background-color: #fff; /* White */
 }
 
 #burger-toggle div::after { /* Third line of burger menu */
@@ -103,7 +103,7 @@ div .btn {
 /* NAVIGATION */
 nav  {
   position: fixed;
-  background-color: #000;
+  background-color: #000; 
   width: 100%;
   height: 58px;
   z-index: 1;
@@ -113,7 +113,7 @@ nav  {
   position: absolute;
   height: 100vh; /* View Port units calculate the size of the screen the user is using, 100 means 100% of the screen */
   width: 100vw;
-  background-color: #000;
+  background-color: #000; /* Black */
   display: none; /* Navigation is not displayed by default */
 }
 
@@ -318,7 +318,7 @@ div #copyright {
 
   nav ul {
     display: flex;
-    color: #000;
+    color: #000; /* Black */
   }
 
   nav ul li {

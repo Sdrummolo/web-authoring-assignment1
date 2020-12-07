@@ -7,36 +7,36 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <!-- Burger Menu -->
-    <div id="burger-toggle">
-      <div></div>
-    </div>
-
-    <div id="nav-container">
-      <ul id="navigation">
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="restaurant.html">Restaurant</a>
-        </li>
-        <li>
-          <a href="menu.html">Menu</a>
-        </li>
-        <li>
-          <a href="gallery.html">Gallery</a>
-        </li>
-        <li>
-          <a href="contacts.html">Contacts</a>
-        </li>
-      </ul> 
-    </div>
-  </nav>
 
   <!-- Header -->
   <header>
+  <!-- Navigation -->
+    <nav>
+      <!-- Burger Menu -->
+      <div id="burger-toggle">
+        <div></div>
+      </div>
+
+      <div id="nav-container">
+        <ul id="navigation">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="restaurant.html">Restaurant</a>
+          </li>
+          <li>
+            <a href="menu.html">Menu</a>
+          </li>
+          <li>
+            <a href="gallery.html">Gallery</a>
+          </li>
+          <li>
+            <a href="contacts.html">Contacts</a>
+          </li>
+        </ul> 
+      </div>
+    </nav>
     <div class="overlay">
       <div class="container">
         <h1>Blackrocks</h1>
@@ -56,7 +56,10 @@
       <h2>The Restaurant</h2>
       <div class="flex-container">
         <div id="image">
-          <img src="./images/photo-1590846406792-0adc7f938f1d.jpg" alt="The Restaurant">
+          <figure>
+            <img src="./images/restaurant.jpg" alt="The Restaurant">
+            <caption>The dining room</caption>
+          </figure>
         </div>
 
         <div>
@@ -66,7 +69,7 @@
             celebrate the taste and textures of the ingredients, using a variety of techniques, flavours and seasonings. 
             To complement, the restaurant offers extensive bottled wine lists, led by our Head Sommelier.
           </p>
-          <a href="#">
+          <a href="menu.html">
             <div class="btn">Menu</div>
           </a>
         </div>
@@ -126,11 +129,11 @@
       </div>
 
       <div id="copyright">
-        <small>&#169; Luigi Di Paolo, 2020</small>
+        <small>&#169; Luigi Di Paolo, 2020</small> <!-- The small tag defines smaller text-->
       </div>
     </div>
   </footer>
 
-  <script src="./javascript/script.js"></script>
+  <script src="./javascript/script.js"></script> 
 </body>
 </html>
